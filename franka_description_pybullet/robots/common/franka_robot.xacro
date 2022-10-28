@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="franka_robot" params="arm_id joint_limits">
+    <!-- Name of this panda -->
+    <!-- Should a franka_gripper be mounted at the flange?" -->
+    <xacro:arg name="hand" default="true" />
+    <!-- Positional offset between $(arm_id)_hand -> $(arm_id)_hand_tcp [m]. Only used when hand:=true -->
+    <xacro:arg name="tcp_xyz" default="0 0 0.1034" />
+    <!-- Rotational offset between $(arm_id)_hand -> $(arm_id)_hand_tcp [rad]. Only used when hand:=true -->
+    <xacro:arg name="tcp_rpy" default="0 0 0" />
+    <!-- Is the robot being simulated in gazebo?" -->
+    <xacro:arg name="gazebo" default="true" />
+
+    <xacro:include filename="$(cwd)/../../robots/common/utils.xacro" />
+    <xacro:include filename="$(cwd)/../../robots/common/franka_arm.xacro" />
+
+    <xacro:franka_arm arm_id="${arm_id}" safety_distance="0.03" gazebo="$(arg gazebo)" joint_limits="${joint_limits}"/>
+
+    <xacro:if value="$(arg hand)">
+      <xacro:include filename="$(cwd)/../../robots/common/franka_hand.xacro"/>
+      <xacro:franka_hand
+          arm_id="$(arg arm_id)"
+          rpy="0 0 ${-pi/4}"
+          tcp_xyz="$(arg tcp_xyz)"
+          tcp_rpy="$(arg tcp_rpy)"
+          connected_to="$(arg arm_id)_link8"
+          safety_distance="0.03"
+          gazebo="$(arg gazebo)"
+       />
+    </xacro:if>
+
+    <!-- Define additional Gazebo tags -->
+    
+  </xacro:macro>
+</robot>
