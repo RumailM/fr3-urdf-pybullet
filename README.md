@@ -14,7 +14,7 @@ This repo contains a modified version of the [franka_description](https://github
     xacro fr3.urdf.xacro > fr3_pybullet.urdf.xml
 We can run the test script to verify that we've generated a compatible .urdf file representing the fr3 robot
 
-    cd ../..
+    cd ../../..
     python pybullet-test.py
     
 ## Notes 
