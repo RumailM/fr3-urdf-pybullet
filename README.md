@@ -18,4 +18,4 @@ We can run the test script to verify that we've generated a compatible .urdf fil
     python pybullet-test.py
     
 ## Notes 
-The original xacro file already a
+The original xacro file already accounts for the difference in joint limits between the panda and fr3. This is mentioned explicitly because both robots use common components for the robot. The inertial parameters do not come officially from Franka and these are for the Panda and not the FR3. It's not ideal, but it's our best for now.
