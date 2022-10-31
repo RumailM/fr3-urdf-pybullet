@@ -18,7 +18,14 @@ We can run the test script to verify that we've generated a compatible .urdf fil
     python pybullet-test.py
     
 
-![image](https://user-images.githubusercontent.com/36772370/198509657-ee7250d2-9bc2-4dd0-9681-16145bca2960.png)
+![image](https://user-images.githubusercontent.com/36772370/198956116-d55df626-0314-4670-bc0c-d656d6e74270.png)
+
     
 ## Notes 
 The original xacro file already accounts for the difference in joint limits between the panda and fr3. This is mentioned explicitly because both robots use common components for the robot. The inertial parameters do not come officially from Franka and these are for the Panda and not the FR3. It's not ideal, but it's our best for now.
+
+### References
+- https://blender.stackexchange.com/questions/18362/exporting-multiple-materials-to-a-single-diffuse-specular-map
+- https://github.com/bulletphysics/bullet3/issues/1934
+- https://www.youtube.com/watch?v=eYvgFWEiNp8&t=946s
+- [https://www.youtube.com/watch?v=rxbQ3IKlQgE](This video shows how the .dae files were converted to .obj files in this repo)
