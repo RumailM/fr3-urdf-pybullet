@@ -28,4 +28,4 @@ The original xacro file already accounts for the difference in joint limits betw
 - https://blender.stackexchange.com/questions/18362/exporting-multiple-materials-to-a-single-diffuse-specular-map
 - https://github.com/bulletphysics/bullet3/issues/1934
 - https://www.youtube.com/watch?v=eYvgFWEiNp8&t=946s
-- [https://www.youtube.com/watch?v=rxbQ3IKlQgE](This video shows how the .dae files were converted to .obj files in this repo)
+- [This video shows how the .dae files were converted to .obj files in this repo](https://www.youtube.com/watch?v=rxbQ3IKlQgE)
