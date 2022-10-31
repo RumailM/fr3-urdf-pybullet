@@ -6,6 +6,7 @@ This repo contains a modified version of the [franka_description](https://github
  - Removed gazebo specific-tag generation in franka_arm.xacro
  - Changed default value of hand and gazebo to true. Without the gazebo tag, the .urdf produced does not contain inertial parameters. We always want the end effector.
  - Replaced commands that dynamically look for the franka_description path on the system as referenced during the xacro parsing. Replaced with relative paths from the robots/fr3 folder. This is to ensure that we are using our modified xacro files.
+ - Changed utils.xacro and franka_hand.xacro to have a material and color (rgba = 1 1 1 1), so that the color maps (Kd maps in the .mtl files) referencing the .png maps can be masked on top of the links.
 
 ## Usage
 
