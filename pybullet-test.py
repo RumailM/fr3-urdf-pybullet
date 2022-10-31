@@ -4,6 +4,7 @@ import pybullet
 import pybullet_data
 
 physcisClient = pybullet.connect(pybullet.GUI)
+pybullet.configureDebugVisualizer(pybullet.COV_ENABLE_GUI, 0)
 
 pybullet.setAdditionalSearchPath(pybullet_data.getDataPath())
 
