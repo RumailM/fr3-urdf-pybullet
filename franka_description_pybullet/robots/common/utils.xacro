@@ -40,7 +40,7 @@
     <link name="${prefix}${name}">
       <visual>
         <geometry>
-          <mesh filename="$(cwd)/../../meshes/visual/${name}.dae" />
+          <mesh filename="$(cwd)/../../meshes/visual/${name}.obj" />
         </geometry>
       </visual>
       <collision>
