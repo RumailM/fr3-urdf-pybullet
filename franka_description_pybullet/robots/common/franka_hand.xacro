@@ -29,6 +29,9 @@
         <geometry>
           <mesh filename="$(cwd)/../../meshes/visual/finger.obj" />
         </geometry>
+        <material name="panda_white">
+          <color rgba="1. 1. 1. 1."/>
+        </material>
       </visual>
       <!-- screw mount -->
       <collision>
@@ -68,6 +71,9 @@
         <geometry>
           <mesh filename="$(cwd)/../../meshes/visual/finger.obj" />
         </geometry>
+        <material name="panda_white">
+          <color rgba="1. 1. 1. 1."/>
+        </material>
       </visual>
       <!-- screw mount -->
       <collision>

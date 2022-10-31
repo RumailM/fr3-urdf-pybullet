@@ -42,6 +42,9 @@
         <geometry>
           <mesh filename="$(cwd)/../../meshes/visual/${name}.obj" />
         </geometry>
+        <material name="panda_white">
+          <color rgba="1. 1. 1. 1."/>
+        </material>
       </visual>
       <collision>
         <geometry>
